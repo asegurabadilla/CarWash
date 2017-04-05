@@ -5,7 +5,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	    <title>CarWash</title> 
 	</head>
-
 	<body>
 		<div align="center">
 			<form id="form" method="post" action="<%= request.getContextPath() %>/Login">
