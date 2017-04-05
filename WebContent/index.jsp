@@ -13,6 +13,7 @@
 						<tr><td>User</td><td><input type="text"  id="user" name="user" required placeholder="xxxx@domain.com"  value=""/></td></tr>
 						<tr><td>Password</td><td><input type="password"  id="pass" name="pass" required value="" /></td></tr>
 				    </table>
+					
 				    <input type="submit" value="Submit"/>
 				</div>
 				<div>

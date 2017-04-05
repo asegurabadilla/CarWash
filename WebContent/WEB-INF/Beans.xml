@@ -37,7 +37,7 @@
 		<property name="hibernateProperties">
 			<props>
 				<!-- <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop> -->
- 				
+ 				            
 				<!--
 					important: Default Engine MySql
 				 	<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop> 

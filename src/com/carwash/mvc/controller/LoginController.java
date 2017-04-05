@@ -26,8 +26,11 @@ public class LoginController {
 	LoginService loginService;
 	
 	 @RequestMapping(value = "/Login", method = RequestMethod.POST)
-	   public ModelAndView login(HttpServletRequest request,HttpServletRequest response, @RequestParam("user") String user, @RequestParam("pass") String pass){
-		User usr = null;
+	   public ModelAndView login(HttpServletRequest request,HttpServletRequest response){
+		 String pass = request.getParameter("pass");
+		 String user = request.getParameter("user");
+		 
+		 User usr = null;
 		 ModelAndView modelAndView = new ModelAndView();
 		 usr = loginService.validaLoginService(user, pass);
 		 if(usr != null){ 
