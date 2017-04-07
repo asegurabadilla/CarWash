@@ -41,7 +41,7 @@
 								<p>Role Number:${role.getRoleNum()}</p>
 							</td>
 						</c:forEach>
-					<td><a class="btn btn-danger" href="<%= request.getContextPath() %>/Login/Delete?user=${user.getUserId()}">Delete</a></td>
+					<td><a class="btn btn-danger" href="<%= request.getContextPath() %>/Login/Delete?usr=${usr.getUserId()}">Delete</a></td>
 				</tr>
 			</tbody>
 		</table>

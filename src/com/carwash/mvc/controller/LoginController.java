@@ -25,16 +25,19 @@ public class LoginController {
 	@Autowired
 	LoginService loginService;
 	
+	@Autowired
+	User user;
+	
+	
 	 @RequestMapping(value = "/Login", method = RequestMethod.POST)
 	   public ModelAndView login(HttpServletRequest request,HttpServletRequest response){
 		 String pass = request.getParameter("pass");
-		 String user = request.getParameter("user");
+		 String usr = request.getParameter("user");
 		 
-		 User usr = null;
 		 ModelAndView modelAndView = new ModelAndView();
-		 usr = loginService.validaLoginService(user, pass);
-		 if(usr != null){ 
-			 modelAndView.addObject("user", usr);
+		 user = loginService.validaLoginService(usr, pass);
+		 if(user != null){ 
+			 modelAndView.addObject("user", user);
 			 modelAndView.setViewName("main.jsp");
 		 }
 		 else{
@@ -53,12 +56,11 @@ public class LoginController {
 	 }
 	 
 	 @RequestMapping(value ="/Delete", method = RequestMethod.GET)
-	 public ModelAndView delete(@RequestParam("user") int user){
+	 public ModelAndView delete(@RequestParam("user") int usr){
 		 ModelAndView modelAndView = new ModelAndView();
-		 modelAndView.addObject("message","User Id: "+user+" Elimanated");
-		 User usr = new User();
-		 usr.setUserId(user);
-		 loginService.deleteUserService(usr);
+		 modelAndView.addObject("message","User Id: "+usr+" Elimanated");
+		 user.setUserId(usr);
+		 loginService.deleteUserService(user);
 		 modelAndView.setViewName("/main.jsp");
 		 return modelAndView;
 	 }

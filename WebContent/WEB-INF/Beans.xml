@@ -5,6 +5,7 @@
     <bean id="login" class="com.carwash.mvc.controller.LoginController" />
     <bean id="loginService" class="com.carwash.mvc.service.LoginServiceImplements" />
     <bean id="loginServiceDAO" class="com.carwash.mvc.dao.LoginDAOImplements" />
+    <bean id="User" class="com.carwash.mvc.model.User" />
     
     
     <bean id="propertyConfigurer"
@@ -44,7 +45,7 @@
 				 -->
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
 		</property>
 	</bean>
